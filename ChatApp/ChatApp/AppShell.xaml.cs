@@ -10,7 +10,9 @@ namespace ChatApp
         public AppShell()
         {
             InitializeComponent();
-            
+            Routing.RegisterRoute("CreateAccountPage", typeof(CreateAccountPage));
+            Routing.RegisterRoute("ForgotPasswordPage", typeof(ForgotPasswordPage));
+            Routing.RegisterRoute("PasswordPage", typeof(PasswordPage));
         }
 
     }

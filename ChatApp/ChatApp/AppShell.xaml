@@ -29,6 +29,13 @@
         </ResourceDictionary>
     </Shell.Resources>
 
+
+    <ShellItem Route="UsernamePage">
+        <ShellContent ContentTemplate="{DataTemplate local:UsernamePage}"/>
+        <ShellContent ContentTemplate="{DataTemplate local:PasswordPage}"/>
+    </ShellItem>
+
+
     <TabBar>
         <ShellContent Title="Chats" Icon="chat_icon.png" Route="ChatsPage" ContentTemplate="{DataTemplate local:ChatsPage}" />
         <ShellContent Title="Profile" Icon="profile_icon.png" ContentTemplate="{DataTemplate local:ProfilePage}" />
@@ -39,7 +46,7 @@
         await Shell.Current.GoToAsync("//LoginPage");
     -->
     <TabBar>
-        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
+        <ShellContent Route="UsernamePage" ContentTemplate="{DataTemplate local:UsernamePage}" />
     </TabBar>
 
 

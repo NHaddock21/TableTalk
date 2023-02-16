@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChatApp.Views.CreateAccountPage" >
+    <ContentPage.Content>
+
+        <ScrollView>
+        
+        
+        <Frame BackgroundColor="#c5e3fe" HorizontalOptions="Start" CornerRadius="0" Padding="5,-15,5,5">
+            <StackLayout BackgroundColor="Transparent" Spacing="-100">
+                <Frame CornerRadius="5" Scale=".45" BackgroundColor="White">
+                    <Image Source="test_profile.png" Scale="1.75"/>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" CornerRadius="5" Padding="4">
+                    <StackLayout BackgroundColor="Transparent" Spacing="10" Padding="25">
+
+                        <Label Text="Create Account" TextColor="Black" FontSize="30" FontAttributes="Bold"/>
+
+                        <Label Text="First Name" TextColor="#00244E" FontSize="18"/>
+
+                        <Entry
+                            x:Name= "firstnametxt"
+                            MaxLength="30">
+                        </Entry>
+
+
+                        <Label Text="Last Name" TextColor="#00244E" FontSize="18"/>
+
+                        <Entry 
+                            x:Name = "lastnametxt"
+                            MaxLength="20"
+                            IsPassword="True">
+                        </Entry>
+
+                        <Label Text="Email" TextColor="#00244E" FontSize="18"/>
+
+                        <Entry 
+                            x:Name = "emailtxt"
+                            MaxLength="20"
+                            IsPassword="True">
+                        </Entry>
+
+                        <Label Text="Password" TextColor="#00244E" FontSize="18"/>
+
+                        <Entry 
+                            x:Name = "passwordtxt"
+                            MaxLength="20"
+                            IsPassword="True">
+                        </Entry>
+
+                        <Label Text="Re-Enter Password" TextColor="#00244E" FontSize="18"/>
+
+                        <Entry 
+                            x:Name = "confirmpasswordtxt"
+                            MaxLength="20"
+                            IsPassword="True">
+                        </Entry>
+
+                        <Label Text="Security Question" TextColor="#00244E" FontSize="18"/>
+
+                            <Picker x:Name="picker" Title="Select a Secutiry Question" TitleColor="Black" HorizontalTextAlignment="Center">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}" >
+                                        <x:String>What was the first exam you failed?</x:String>
+                                        <x:String>What is your oldest cousin's first and last name?</x:String>
+                                        <x:String>In what city or town did your mother and father meet?</x:String>
+                                        <x:String>What was the name of your first stuffed animal?</x:String>
+                                        <x:String>What is the middle name of your youngest child?</x:String>
+                                        <x:String>In what city did you meet your spouse/significant other?</x:String>
+                                        <x:String>Where were you when you had your first kiss?</x:String>
+                                        <x:String>What was the name of the boy or the girl you first kissed?</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+
+                            <Label Text="Security Question Answer" TextColor="#00244E" FontSize="18"/>
+
+                            <Entry 
+                            x:Name = "answertxt"
+                            MaxLength="20"
+                            IsPassword="True">
+                            </Entry>
+
+                            <Button 
+                    
+                            BackgroundColor="#4a9bfc" VerticalOptions="Center" 
+                            HorizontalOptions="Center" Padding="65,10,65,10" CornerRadius="5"                
+                            Text="Sign Up" TextColor="White" FontSize="20" TextTransform="None">
+                        </Button>
+                        
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
