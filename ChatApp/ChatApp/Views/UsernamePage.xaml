@@ -1,31 +1,37 @@
 ﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ChatApp.Views.UsernamePage"
-             Shell.NavBarIsVisible="False" BackgroundColor="#c5e3fe">
+             Shell.NavBarIsVisible="False" BackgroundColor="#c5e3fe" Shell.FlyoutBehavior="Disabled">
     <ContentPage.Content>
 
         <ScrollView>
 
             
-            
+            <!-- Frames make it so you can keep everything organized under one grouping -->
             <Frame BackgroundColor="#c5e3fe" HorizontalOptions="Start" CornerRadius="0" Padding="5,-15,5,5" HasShadow="False">
+                
+                <!-- StackLayouts allow you to put multiple different items in one frame -->
                 <StackLayout BackgroundColor="Transparent" Spacing="-100">
-                    <Frame CornerRadius="5" Scale=".45" BackgroundColor="White">
-                        <Image Source="test_profile.png" Scale="1.75"/>
+                    <Frame CornerRadius="500" Scale=".45" BackgroundColor="White"
+                       HorizontalOptions="CenterAndExpand" HasShadow="True"
+                       HeightRequest="400" WidthRequest="400" Padding="0">
+                        
+                        <Image Source="test_profile.png" Scale="1.75" Aspect="AspectFill"/>
                     </Frame>
 
                     <Frame BackgroundColor="Transparent" CornerRadius="5" Padding="4">
                         <StackLayout BackgroundColor="Transparent" Spacing="10" Padding="25">
 
-                            <Label Text="Sign In" TextColor="Black" FontSize="30" FontAttributes="Bold"/>
+                            <!-- This you create a label/text box -->
+                            <Label Text="Username" TextColor="Black" FontSize="30" FontAttributes="Bold"/>
 
-                            <Label Text="Username" TextColor="#00244E" FontSize="18"/>
-
+                            <!-- This you create an entry box -->
                             <Entry
                             x:Name= "usernametxt"
                             MaxLength="30">
                             </Entry>
                             
+                            <!-- This is a normal button -->
                             <Button               
                             BackgroundColor="#4a9bfc" VerticalOptions="Center" 
                             HorizontalOptions="Center" Padding="65,10,65,10" CornerRadius="5"                
@@ -33,7 +39,7 @@
                             Clicked="NextButtonClicked">
                             </Button>
                            
-                                
+                                <!-- This is how you create a button with no frame -->
                                 <Button Text="Sign Up"  HorizontalOptions="Start" Padding="-40,0,0,0"
                                     BackgroundColor="Transparent" 
                                     FontSize="12" TextColor="#4a9bfc"  

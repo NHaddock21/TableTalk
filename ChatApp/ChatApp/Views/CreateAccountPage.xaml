@@ -1,16 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ChatApp.Views.CreateAccountPage" >
+             x:Class="ChatApp.Views.CreateAccountPage" BackgroundColor="#c5e3fe" Shell.FlyoutBehavior="Disabled"  >
     <ContentPage.Content>
 
         <ScrollView>
         
         
-        <Frame BackgroundColor="#c5e3fe" HorizontalOptions="Start" CornerRadius="0" Padding="5,-15,5,5">
+        <Frame BackgroundColor="#c5e3fe" HorizontalOptions="CenterAndExpand" CornerRadius="0" Padding="5,-15,5,5" HasShadow="False">
             <StackLayout BackgroundColor="Transparent" Spacing="-100">
-                <Frame CornerRadius="5" Scale=".45" BackgroundColor="White">
-                    <Image Source="test_profile.png" Scale="1.75"/>
+                
+                <Frame CornerRadius="500" Scale=".45" BackgroundColor="White"
+                       HorizontalOptions="CenterAndExpand" HasShadow="True"
+                       HeightRequest="400" WidthRequest="400" Padding="0">
+                    
+                    <ImageButton Clicked="Profile_Clicked" x:Name="resultImage" BackgroundColor="White" Aspect="AspectFill"/>
+                    
                 </Frame>
 
                 <Frame BackgroundColor="Transparent" CornerRadius="5" Padding="4">

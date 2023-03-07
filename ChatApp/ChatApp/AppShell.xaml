@@ -32,7 +32,7 @@
 
     <ShellItem Route="UsernamePage">
         <ShellContent ContentTemplate="{DataTemplate local:UsernamePage}"/>
-        <ShellContent ContentTemplate="{DataTemplate local:PasswordPage}"/>
+        
     </ShellItem>
 
 
@@ -45,9 +45,6 @@
         If you would like to navigate to this content you can do so by calling
         await Shell.Current.GoToAsync("//LoginPage");
     -->
-    <TabBar>
-        <ShellContent Route="UsernamePage" ContentTemplate="{DataTemplate local:UsernamePage}" />
-    </TabBar>
 
 
 </Shell>
