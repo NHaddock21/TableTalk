@@ -4,9 +4,8 @@
              x:Class="ChatApp.Views.ChatsPage" Shell.NavBarIsVisible="True" Title="Chats">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Chats Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
