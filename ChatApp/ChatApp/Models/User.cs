@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ChatApp.Models
 {
-    class User
+    public class User
     {
         [PrimaryKey, AutoIncrement]
         public int UserID { get; set; }

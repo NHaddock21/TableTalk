@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -89,7 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ChatApp\ChatApp.csproj">
-      <Project>{8B8F3495-BD5A-40FA-B68B-8BB55185424F}</Project>
+      <Project>{B40A5EA4-9CCC-4DCF-91D5-D748CB871A91}</Project>
       <Name>ChatApp</Name>
     </ProjectReference>
   </ItemGroup>
