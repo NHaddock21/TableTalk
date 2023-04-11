@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChatApp.Views.ChatPage"
+             BackgroundColor="#c5e3fe">
+    
+
+    <StackLayout>
+
+        <Frame HorizontalOptions="CenterAndExpand" Padding="10,5,10,5" Margin="10,10,10,5" BorderColor="AliceBlue">
+            <Label x:Name="welcome_label" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20" />
+        </Frame>
+
+        <Frame Margin="10,0,10,0" VerticalOptions="FillAndExpand" Padding="10" BorderColor="AliceBlue">
+            <ScrollView x:Name="scrollViewChatMsgArea">
+                <StackLayout x:Name="chat_messages_area">
+                    
+
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+
+        <Frame Padding="10,5,10,5" Margin="10,5,10,15" VerticalOptions="End" BorderColor="AliceBlue">
+            <Entry x:Name="chat_entry_box" Placeholder="Enter chat message" Completed="Chat_Entry_Completed"/>
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>

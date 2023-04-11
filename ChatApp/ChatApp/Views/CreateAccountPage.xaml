@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ChatApp.Views.CreateAccountPage" BackgroundColor="#c5e3fe" Shell.FlyoutBehavior="Disabled"  >
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:chatapp="clr-namespace:ChatApp" x:DataType="chatapp:AppShell"
+             x:Class="ChatApp.Views.CreateAccountPage" BackgroundColor="#c5e3fe" Shell.FlyoutBehavior="Disabled" Shell.NavBarIsVisible="False" >
     <ContentPage.Content>
 
         <ScrollView>
@@ -26,46 +26,65 @@
                         <Label Text="First Name" TextColor="#00244E" FontSize="18"/>
 
                         <Entry
-                            x:Name= "firstnametxt"
+                            x:Name= "FirstNametxt"
                             MaxLength="30">
                         </Entry>
 
+                            <Label Text="" TextColor="Red" FontSize="18" x:Name="FirstNameError"/>
 
-                        <Label Text="Last Name" TextColor="#00244E" FontSize="18"/>
+
+                            <Label Text="Last Name" TextColor="#00244E" FontSize="18"/>
 
                         <Entry 
-                            x:Name = "lastnametxt"
+                            x:Name = "LastNametxt"
+                            MaxLength="20">
+                        </Entry>
+
+                            <Label Text="" TextColor="Red" FontSize="18" x:Name="LastNameError"/>
+
+
+                            <Label Text="Email" TextColor="#00244E" FontSize="18"/>
+
+                        <Entry 
+                            x:Name = "Emailtxt"
+                            MaxLength="20">
+                        </Entry>
+
+                            <Label Text="" TextColor="Red" FontSize="18" x:Name= "EmailError"/>
+
+                            <Label Text="Username" TextColor="#00244E" FontSize="18"/>
+
+                            <Entry 
+                            x:Name = "Usernametxt"
+                            MaxLength="20">
+                            </Entry>
+
+                            <Label Text="" TextColor="Red" FontSize="18" x:Name= "UsernameError"/>
+
+                            <Label Text="Password" TextColor="#00244E" FontSize="18"/>
+
+                        <Entry 
+                            x:Name = "Passwordtxt"
                             MaxLength="20"
                             IsPassword="True">
                         </Entry>
 
-                        <Label Text="Email" TextColor="#00244E" FontSize="18"/>
+                            <Label Text="" TextColor="Red" FontSize="18" x:Name="PasswordError"/>
+
+                            <Label Text="Re-Enter Password" TextColor="#00244E" FontSize="18"/>
+                        
 
                         <Entry 
-                            x:Name = "emailtxt"
+                            x:Name = "PasswordMatchtxt"
                             MaxLength="20"
                             IsPassword="True">
                         </Entry>
 
-                        <Label Text="Password" TextColor="#00244E" FontSize="18"/>
+                            <Label Text="" TextColor="Red" FontSize="18" x:Name="PasswordMatchError"/>
 
-                        <Entry 
-                            x:Name = "passwordtxt"
-                            MaxLength="20"
-                            IsPassword="True">
-                        </Entry>
+                            <Label Text="Security Question" TextColor="#00244E" FontSize="18"/>
 
-                        <Label Text="Re-Enter Password" TextColor="#00244E" FontSize="18"/>
-
-                        <Entry 
-                            x:Name = "confirmpasswordtxt"
-                            MaxLength="20"
-                            IsPassword="True">
-                        </Entry>
-
-                        <Label Text="Security Question" TextColor="#00244E" FontSize="18"/>
-
-                            <Picker x:Name="picker" Title="Select a Secutiry Question" TitleColor="Black" HorizontalTextAlignment="Center">
+                            <Picker x:Name="Questiontxt" Title="Select a Secutiry Question" TitleColor="Black" HorizontalTextAlignment="Center">
                                 <Picker.ItemsSource>
                                     <x:Array Type="{x:Type x:String}" >
                                         <x:String>What was the first exam you failed?</x:String>
@@ -83,7 +102,7 @@
                             <Label Text="Security Question Answer" TextColor="#00244E" FontSize="18"/>
 
                             <Entry 
-                            x:Name = "answertxt"
+                            x:Name = "Answertxt"
                             MaxLength="20"
                             IsPassword="True">
                             </Entry>
@@ -92,7 +111,7 @@
                     
                             BackgroundColor="#4a9bfc" VerticalOptions="Center" 
                             HorizontalOptions="Center" Padding="65,10,65,10" CornerRadius="5"                
-                            Text="Sign Up" TextColor="White" FontSize="20" TextTransform="None">
+                            Text="Sign Up" TextColor="White" FontSize="20" TextTransform="None" Clicked="SubmitClicked">
                         </Button>
                         
                     </StackLayout>

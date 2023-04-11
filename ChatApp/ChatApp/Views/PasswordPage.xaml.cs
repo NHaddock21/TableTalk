@@ -24,7 +24,7 @@ namespace ChatApp.Views
 
         private async void SignInClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync($"//ChatsPage");
+            await Shell.Current.GoToAsync($"//ContactsPage");
         }
 
     }

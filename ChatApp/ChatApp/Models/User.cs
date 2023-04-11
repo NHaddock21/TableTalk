@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ChatApp.Models
 {
-    class User
+    public class User
     {
         [PrimaryKey, AutoIncrement]
         public int UserID { get; set; }
@@ -29,11 +29,25 @@ namespace ChatApp.Models
             get { return email; }
             set { email = value; OnPropertyChanged(nameof(Email)); }
         }
+        string username;
+        public string UserName
+        {
+            get { return username; }
+            set { username = value; OnPropertyChanged(nameof(UserName)); }
+        }
         string password;
         public string Password
         {
             get { return password; }
             set { password = value; OnPropertyChanged(nameof(Password)); }
+        }
+
+        string securityQuestion;
+
+        public string SecurityQuestion
+        {
+            get { return securityQuestion; }
+            set { securityQuestion = value; OnPropertyChanged(nameof(SecurityQuestion)); }
         }
 
         string securityAnswer;
@@ -62,6 +76,8 @@ namespace ChatApp.Models
             LName = string.Empty;
             Email = string.Empty;
             Password = string.Empty;
+            SecurityQuestion = string.Empty;
+            SecurityAnswer = string.Empty;
 
         }
 

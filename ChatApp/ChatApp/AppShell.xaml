@@ -10,16 +10,19 @@
     
         https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
     -->
+    
+    
+    
 
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.BackgroundColor" Value="#4a9bfc" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#4a9bfc" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
@@ -29,15 +32,23 @@
         </ResourceDictionary>
     </Shell.Resources>
 
+    
+
+    <TabBar>
+        <ShellContent Title="Chats" Icon="chat_icon.png" Route="ContactsPage" ContentTemplate="{DataTemplate local:ContactsPage}" />
+        <ShellContent Title="Profile" Icon="profile_icon.png" ContentTemplate="{DataTemplate local:ProfilePage}" />
+    </TabBar>
 
     <ShellItem Route="UsernamePage">
         <ShellContent ContentTemplate="{DataTemplate local:UsernamePage}"/>
-        
+
     </ShellItem>
 
 
+
+
     <TabBar>
-        <ShellContent Title="Chats" Icon="chat_icon.png" Route="ChatsPage" ContentTemplate="{DataTemplate local:ChatsPage}" />
+        <ShellContent Title="Chats" Icon="chat_icon.png" Route="ContactsPage" ContentTemplate="{DataTemplate local:ContactsPage}" />
         <ShellContent Title="Profile" Icon="profile_icon.png" ContentTemplate="{DataTemplate local:ProfilePage}" />
     </TabBar>
 

@@ -1,0 +1,5 @@
+{
+  "LocalHost": "http://192.168.0.27:5001/chatHub",
+  "RemoteHost": "https://tabletalk.database.windows.net/chatHub",
+  "IsUsingLocalHost": false
+}
